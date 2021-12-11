@@ -1,0 +1,10 @@
+.home_bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../Assets/home.jpg");
+}

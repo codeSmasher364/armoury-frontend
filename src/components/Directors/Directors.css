@@ -1,0 +1,200 @@
+/* ///////////////////////////////////////////////////////////// */
+
+.wrapper{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../Assets/Hero.jpg");
+    display: flex;
+    align-items: center;
+}
+.wrapper .outer{
+  height: 100vh;
+  width:40vw;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.wrapper .card{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  justify-content: space-between;
+  border-radius: 100px 20px 20px 100px;
+  animation: animate 15s linear infinite;
+  animation-delay: calc(3s * var(--delay));
+}
+.outer:hover .card{
+  animation-play-state: paused;
+}
+.wrapper .card:last-child{
+  animation-delay: calc(-3s * var(--delay));
+}
+@keyframes animate {
+  0%{
+    opacity: 0;
+    transform: translateY(100%) scale(0.5);
+  }
+  5%, 20%{
+    opacity: 0.4;
+    transform: translateY(100%) scale(0.7);
+  }
+  25%, 40%{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0%) scale(1);
+  }
+  45%, 60%{
+    opacity: 0.4;
+    transform: translateY(-100%) scale(0.7);
+  }
+  65%, 100%{
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+}
+.card .content{
+  display: flex;
+  align-items: center;
+}
+
+/* .details span{
+  font-weight: 600;
+  font-size: 2rem;
+  color:rgba(255, 255, 255, 0.9)
+} */
+
+
+
+
+/* ///////////////////////// */
+.wrapper_div{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  url("../../Assets/Hero.jpg");
+  display: flex;
+  align-items: center;
+}
+.outer_div{
+  border: 1px solid black;
+  height: 50vh;
+  width:30vw;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  /* overflow: hidden; */
+}
+.inActive_container{
+  height:70px;
+  width:auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  transform: scale(1);
+  transition: all 0.8s;
+}
+.extra{
+  margin-top:300px;
+}
+.active_container{
+  height:70px;
+  transform: scale(2);
+  transition: all 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.inActive_name{
+  font-size:1.6rem;
+  color:rgba(255,255,255, .4);
+  cursor: pointer;
+  opacity:0.5;
+}
+.inActive_name:hover{
+  color:rgba(255,255,255, .8);
+  opacity:1
+}
+.active_name{
+  font-size: 1.6rem;
+  color:rgba(255,255,255, .9);
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* /// details */
+
+.details_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem 1.52rem;
+}
+.content_div{
+  text-align: center;
+  width:400px;
+  margin-top: 2rem;
+}
+.content_heading{
+  font-family: 'GT Flexa Trial';
+font-style: normal;
+font-weight: normal;
+font-size: 1.6rem;
+text-transform: uppercase;
+margin-block-start: 1rem;
+margin-block-end: 0;
+}
+.content_text{
+  font-family: 'Neue Haas Grotesk Display Pro';
+font-style: normal;
+font-weight: normal;
+font-size: 1rem;
+line-height: 24px;
+color: #727272;
+}
+.card_div{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+.card_box{
+  margin-bottom:3rem;
+}
+.card_text_div{
+  margin-top: .5rem;
+}
+.card_heading{
+  font-size:1.2rem;
+  margin-block-start: 0;
+margin-block-end: 0;
+}
+.card_box_img{
+  width: 400px;
+  height: 288px;
+}
+.card_text_p{
+  font-size:.9rem;
+  font-style: italic;
+  margin-block-start: 0;
+margin-block-end: 0;
+}
